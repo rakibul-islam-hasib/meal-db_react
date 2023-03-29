@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css'
 import Card from './Components/Card/Card';
+import Cart from './Components/Cart/Cart';
 import NavBar from './Components/NavBar/NavBar';
 
 function App() {
@@ -14,11 +15,14 @@ function App() {
     <div className="App">
       <NavBar></NavBar>
       <div className="container">
-        <div className="">
-         <Card data={data}></Card>
+        <div className="card-item">
+         {/* <Card data={data}></Card> */}
+         {
+            data.map(item => <Card key={item.idMeal} data={item}></Card>)
+         }
         </div>
         <div className="">
-          <h1>Hello From Cart Section </h1>
+          <Cart /> 
         </div>
       </div>
     </div>

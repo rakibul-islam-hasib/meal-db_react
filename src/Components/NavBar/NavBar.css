@@ -7,6 +7,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    position: sticky;
+    /* bottom: ; */
+    top: 0;
+    background-color: #fff;
 }
 .Navbar h1 {
     font-size: 2rem;
